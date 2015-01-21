@@ -1,0 +1,56 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<table align="center" class="register">
+		<h1 class="register-title">Enter Filename with extension</h1>
+		<tr>
+			<td>
+				<p>
+				<form method="POST" enctype="multipart/form-data" action="/upload">
+					<table>
+						<tr>
+							<input type="file" name="file">
+							<br />
+						</tr>
+						<tr>
+							<td>
+								<p class="name">
+									<input type="text" name="name" id="name"
+										placeholder="test.pdf, book1.xlsx" /> <label for="name"></label>
+								</p>
+							</td>
+							<td>
+								<p class="submit">
+									<input type="submit" value="Upload">
+							</td>
+							</p>
+						</tr>
+					</table>
+				</form>
+				</p>
+			</td>
+			<td>
+				<p>
+				<form method="GET" enctype="multipart/form-data" action="/download">
+					<table class="register">
+						<td>
+							<p class="name">
+								<input type="text" name="dname" id="dname"
+									placeholder="test.pdf, book1.xlsx" /> <label for="name"></label>
+							</p>
+						</td>
+
+						<td><p class="submit">
+								<input type="submit" value="Download"></td>
+
+					</table>
+				</form>
+				</p>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
