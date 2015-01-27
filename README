@@ -1,0 +1,7 @@
+This is a File Upload and Download application developed using Spring Framework.
+
+To run the application:
+1. Open command prompt.
+2. cd to the /repo/build/libs
+3. Type in the command: java -jar <name of the jar file>
+4. Open http://localhost:port in your browser.
