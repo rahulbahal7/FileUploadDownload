@@ -11,14 +11,12 @@ To RUN the application:
 4. Open http://localhost:port in your browser.
 
 
-
 --------------------------------------------------------------------------------------------------------
 
 UPDATES: 
 
 This update consists of Code Updates, User Experience updates, major bug fixes like
 exception handling in a File Download scenario.
-
 
 
 CODE UPDATES: 
@@ -62,15 +60,11 @@ CODE UPDATES:
              by clicking "OK", then the file is saved with it's original name. Otherwise, the same
              page continues to display.
             
-            
-            
+    
 4. CSS Improvements to support better User Experience.
-
-
 
 5. In order to have maintainability of code, addition of a seperate javascript file to handle the client 
    side validations.
-
 
 
 --------------------------------------------------------------------------------------------------------
@@ -78,5 +72,4 @@ CODE UPDATES:
 
 Known Issue: 
 
-
-"Refresh the page" to clear form data in case of navigation using "Browser Back".
+Refresh the page" to clear form data in case of navigation using "Browser Back".
