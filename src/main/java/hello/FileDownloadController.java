@@ -37,7 +37,7 @@ public class FileDownloadController {
 		}
 
 		// Section to Download File
-		final int BUFFER_SIZE = 1024;
+		final int BUFFER_SIZE = 2048;
 
 		if(filePresent && !file.isEmpty()){
 			try
@@ -83,7 +83,7 @@ public class FileDownloadController {
 				return "File Downloaded Successfully";
 
 			}catch (Exception e) {
-				return "File does not exist. Please check the filename (and extension)!";
+				return "File does not exist. Please check the filename (and extension)";
 			}
 		}
 		else return "File does not exist. Please check the filename (and extension)!";
