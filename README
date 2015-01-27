@@ -1,7 +1,82 @@
 This is a File Upload and Download application developed using Spring Framework.
 
-To run the application:
+To RUN the application:
+
 1. Open command prompt.
-2. cd to the /repo/build/libs
+
+2. cd to "/path/to/repo/build/libs"
+
 3. Type in the command: java -jar <name of the jar file>
+
 4. Open http://localhost:port in your browser.
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+UPDATES: 
+
+This update consists of Code Updates, User Experience updates, major bug fixes like
+exception handling in a File Download scenario.
+
+
+
+CODE UPDATES: 
+
+
+1. FileUploadController
+
+    a. While uploading a file, three scenarios have been handled to improve the functionality:
+    
+          i. When user provides no name on the form, the original file name is considered.
+          
+         ii. When the user provides only a name, but no extension for the file, the name with 
+             given name is stored along with the extracted file-type from the original file to 
+             maintain consistency.
+             
+        iii. When the user enters a filename with the extension, the file is stored with the
+             provided name and extension.
+    
+    b. Appropriate messages are displayed as per the above 3 scenarios.
+    
+    c. Performance update: Killing of the File/Buffer objects to prevent memory leakage.
+
+
+2. FileDownloadController
+
+    a. A page with an error message is displayed when the user enters an invalid or non-existant
+       file name instead of being redirected to an error page(which was present earlier due to 
+       inefficient exception handling).
+       
+       
+3. General Updates:
+
+    a. Improved user experience on Home Page
+    
+          i. Upload button gets enabled only when a user browses and selects a file to be uploaded.
+          
+         ii. The user is displayed a prompt if a file name is not entered while Downloading a file.
+         
+        iii. The user is asked for a confirmation "Do you want to save the file with original name?"
+             when he tries to upload the file and does not provide a file name. If the user agrees
+             by clicking "OK", then the file is saved with it's original name. Otherwise, the same
+             page continues to display.
+            
+            
+            
+4. CSS Improvements to support better User Experience.
+
+
+
+5. In order to have maintainability of code, addition of a seperate javascript file to handle the client 
+   side validations.
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+Known Issue: 
+
+
+"Refresh the page" to clear form data in case of navigation using "Browser Back".
