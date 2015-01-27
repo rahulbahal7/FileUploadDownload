@@ -20,7 +20,9 @@ This update consists of Code Updates, User Experience updates, major bug fixes l
 exception handling in a File Download scenario.
 
 
+
 CODE UPDATES: 
+
 
 1. FileUploadController
 
@@ -61,15 +63,20 @@ CODE UPDATES:
              page continues to display.
             
             
+            
 4. CSS Improvements to support better User Experience.
+
 
 
 5. In order to have maintainability of code, addition of a seperate javascript file to handle the client 
    side validations.
 
 
+
 --------------------------------------------------------------------------------------------------------
 
+
 Known Issue: 
+
 
 "Refresh the page" to clear form data in case of navigation using "Browser Back".
