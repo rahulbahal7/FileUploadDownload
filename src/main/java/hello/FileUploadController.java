@@ -50,7 +50,7 @@ public class FileUploadController {
 					return "You successfully uploaded the file " + original_filename;
 				}
 
-				//Upload the file with the supplied user name
+				//Upload the file with the supplied file name
 
 				else
 				{
