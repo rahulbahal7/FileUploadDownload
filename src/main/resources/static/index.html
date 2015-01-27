@@ -1,18 +1,26 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
 
+<link rel="stylesheet" type="text/css" href="style.css">
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="validator.js"></script>
+</head>
+
+<body>
 	<table align="center" class="register">
 		<h1 class="register-title">Enter Filename with extension</h1>
 		<tr>
 			<td>
 				<p>
-				<form method="POST" enctype="multipart/form-data" action="/upload">
+				<form name="uform " id="uform" method="POST"
+					enctype="multipart/form-data" onsubmit="return validateInput();"
+					action="/upload">
 					<table>
 						<tr>
-							<input type="file" name="file">
+							<input type="file" name="file1" id="file1">
 							<br />
 						</tr>
 						<tr>
@@ -24,9 +32,8 @@
 							</td>
 							<td>
 								<p class="submit">
-									<input type="submit" value="Upload">
+									<input type="submit" disabled="disabled" value="Upload">
 							</td>
-							</p>
 						</tr>
 					</table>
 				</form>
@@ -34,7 +41,9 @@
 			</td>
 			<td>
 				<p>
-				<form method="GET" enctype="multipart/form-data" action="/download">
+				<form name="dform " id="dform" method="GET"
+					enctype="multipart/form-data" onsubmit="return check();"
+					action="/download">
 					<table class="register">
 						<td>
 							<p class="name">
@@ -42,9 +51,8 @@
 									placeholder="test.pdf, book1.xlsx" /> <label for="name"></label>
 							</p>
 						</td>
-
 						<td><p class="submit">
-								<input type="submit" value="Download"></td>
+								<input type="submit" id="download_button" value="Download"></td>
 
 					</table>
 				</form>

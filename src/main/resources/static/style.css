@@ -41,12 +41,27 @@ input:hover, textarea:hover, input:focus, textarea:focus {
 .submit input {
 	width: 100;
 	padding: 9px 15px;
-	background: #617798;
+	background: #008cd0;
 	border: 0;
 	font-size: 14px;
 	color: #FFFFFF;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
+}
+
+.submit-download input {
+	width: 100;
+	padding: 9px 15px;
+	background: #008cd0;
+	border: 0;
+	font-size: 14px;
+	color: #FFFFFF;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.submit input[type="submit"]:disabled {
+	background: gray;
 }
 
 input[type="submit"]:hover {

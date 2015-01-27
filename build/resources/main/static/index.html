@@ -1,51 +1,64 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
 
-<table align="center" class ="register">
-<h1 class="register-title">Enter Filename with extension</h1>
-	<tr>
-	<td>
-	<p>
-	<form method="POST" enctype="multipart/form-data" action="/upload">
-		<table>
-			<tr ><input type="file" name="file"><br /></tr>
-			<tr>
-				<td>
-				<p class="name"> 
-					<input type="text" name="name" id="name" placeholder="test.pdf, book1.xlsx"/> 
-					<label for="name"></label> 
+<link rel="stylesheet" type="text/css" href="style.css">
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="validator.js"></script>
+</head>
+
+<body>
+	<table align="center" class="register">
+		<h1 class="register-title">Enter Filename with extension</h1>
+		<tr>
+			<td>
+				<p>
+				<form name="uform " id="uform" method="POST"
+					enctype="multipart/form-data" onsubmit="return validateInput();"
+					action="/upload">
+					<table>
+						<tr>
+							<input type="file" name="file1" id="file1">
+							<br />
+						</tr>
+						<tr>
+							<td>
+								<p class="name">
+									<input type="text" name="name" id="name"
+										placeholder="test.pdf, book1.xlsx" /> <label for="name"></label>
+								</p>
+							</td>
+							<td>
+								<p class="submit">
+									<input type="submit" disabled="disabled" value="Upload">
+							</td>
+						</tr>
+					</table>
+				</form>
 				</p>
 			</td>
 			<td>
-			<p class="submit"> <input type="submit" value="Upload">
-			</td>
-			</p>
-			</tr>
-		</table>
-	</form>
-	</p>
-	</td>
-	<td>
-	<p>
-	<form method="GET" enctype="multipart/form-data" action="/download" >
-		<table class ="register">
-		<td>
-				<p class="name"> 
-					<input type="text" name="dname" id="dname" placeholder="test.pdf, book1.xlsx"/> 
-					<label for="name"></label> 
+				<p>
+				<form name="dform " id="dform" method="GET"
+					enctype="multipart/form-data" onsubmit="return check();"
+					action="/download">
+					<table class="register">
+						<td>
+							<p class="name">
+								<input type="text" name="dname" id="dname"
+									placeholder="test.pdf, book1.xlsx" /> <label for="name"></label>
+							</p>
+						</td>
+						<td><p class="submit">
+								<input type="submit" id="download_button" value="Download"></td>
+
+					</table>
+				</form>
 				</p>
-		</td>
-		
-		<td><p class="submit"> <input type="submit" value="Download"></td>
-			
-		</table>
-	</form>
-	</p>
-	</td>
-	</tr>
+			</td>
+		</tr>
 	</table>
 </body>
 </html>
