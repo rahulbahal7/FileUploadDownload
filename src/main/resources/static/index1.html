@@ -1,0 +1,97 @@
+<html>
+<head>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script>
+	// Confirm if user wants to use the original file name
+	function validateInput() {
+		var name = document.forms["uform"]["name"].value;
+
+		if (name == null || name == "") {
+			var ans = confirm("Do you want to save the file with original name?");
+			if (ans)
+				return true;
+			else
+				return false;
+
+		}
+	}
+</script>
+
+<script>
+	// Check if input is present while downloading
+	​
+	// Enable the upload button only when a user selects a file to be uploaded.
+	$(document).ready(function() {
+		$('input:file').change(function() {
+			if ($(this).val()) {
+				$('input:submit').attr('disabled', false);
+			}
+		});
+	});
+</script>
+
+
+</head>
+
+<body>
+	<table align="center" class="register">
+		<h1 class="register-title">Enter Filename with extension</h1>
+		<tr>
+			<td>
+				<p>
+				<form name="uform " id="uform" method="POST"
+					enctype="multipart/form-data" onsubmit=return
+					validateInput();
+					action="/upload">
+					<table>
+						<tr>
+							<input type="file" name="file1" id="file1">
+							<br />
+						</tr>
+						<tr>
+							<td>
+								<p class="name">
+									<input type="text" name="name" id="name"
+										placeholder="test.pdf, book1.xlsx" /> <label for="name"></label>
+								</p>
+							</td>
+							<td>
+								<p class="submit">
+									<input type="submit" disabled="disabled" value="Upload">
+							</td>
+						</tr>
+					</table>
+				</form>
+				</p>
+			</td>
+			<td>
+				<p>
+				<form name="dform " id="dform" method="GET"
+					enctype="multipart/form-data" action="/download">
+					<table class="register">
+						<td>
+							<p class="name">
+								<input type="text" name="dname" id="dname"
+									placeholder="test.pdf, book1.xlsx" /> <label for="name"></label>
+							</p>
+						</td>
+						<td><p class="submit">
+								<input type="submit" id="download_button" value="Download"></td>
+
+					</table>
+				</form>
+				</p>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
