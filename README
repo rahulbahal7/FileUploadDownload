@@ -28,11 +28,11 @@ CODE UPDATES:
 
     a. While uploading a file, three scenarios have been handled to improve the functionality:
     
-          i. When user provides no name on the form, the original file name is considered.
+          i. When user provides no name on the form, the original file name is considered. 
           
          ii. When the user provides only a name, but no extension for the file, the name with 
              given name is stored along with the extracted file-type from the original file to 
-             maintain consistency.
+             maintain consistency.             
              
         iii. When the user enters a filename with the extension, the file is stored with the
              provided name and extension.
@@ -45,7 +45,7 @@ CODE UPDATES:
 2. FileDownloadController
 
     a. A page with an error message is displayed when the user enters an invalid or non-existant
-       file name instead of being redirected to an error page(which was present earlier due to 
+       file name instead of being redirected to an error page (which was present earlier due to 
        inefficient exception handling).
        
        
@@ -53,9 +53,9 @@ CODE UPDATES:
 
     a. Improved user experience on Home Page
     
-          i. Upload button gets enabled only when a user browses and selects a file to be uploaded.
+          i. Upload button gets enabled only when a user browses and selects a file to be uploaded. 
           
-         ii. The user is displayed a prompt if a file name is not entered while Downloading a file.
+         ii. The user is displayed a prompt if a file name is not entered while Downloading a file. 
          
         iii. The user is asked for a confirmation "Do you want to save the file with original name?"
              when he tries to upload the file and does not provide a file name. If the user agrees
